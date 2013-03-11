@@ -1,0 +1,535 @@
+<html><meta charset="UTF-8"><style>html {
+    border: 3px solid #EEEEEE;
+    margin: 2em auto;
+    padding: 0;
+    width: 975px; }
+
+body {
+    background-color: white;
+    border: 1px solid #CACACA;
+    font-family: Helvetica,arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 30px;
+    margin: 0; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4;
+  text-decoration: none; }
+a:hover {
+  text-decoration: underline; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url("../../images/modules/styleguide/para.png") no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url("https://a248.e.akamai.net/assets.github.com/assets/primer/markdown/dirty-shade-0e7d81b119cc9beae17b0c98093d121fa0050a74.png") repeat-x 0 0;
+  border: 0 none;
+  color: #ccc;
+  height: 4px;
+  padding: 0; }
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+ul :last-child, ol :last-child {
+  margin-bottom: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  border-collapse: collapse; border-spacing: 0; padding: 0; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+
+.markdown-body code,.markdown-body tt{margin:0 2px;padding:0px 5px;white-space:nowrap;border:1px solid #eaeaea;background-color:#f8f8f8;border-radius:3px}
+.markdown-body pre>code{margin:0;padding:0;white-space:pre;border:none;background:transparent}
+.markdown-body .highlight pre,.markdown-body pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:13px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px}
+.markdown-body pre code,.markdown-body pre tt{background-color:transparent;border:none}
+.highlight{background:#ffffff}
+.highlight .c{color:#999988;font-style:italic}
+.highlight .err{color:#a61717;background-color:#e3d2d2}
+.highlight .k{font-weight:bold}
+.highlight .o{font-weight:bold}
+.highlight .cm{color:#999988;font-style:italic}
+.highlight .cp{color:#999999;font-weight:bold}
+.highlight .c1{color:#999988;font-style:italic}
+.highlight .cs{color:#999999;font-weight:bold;font-style:italic}
+.highlight .gd{color:#000000;background-color:#ffdddd}
+.highlight .gd .x{color:#000000;background-color:#ffaaaa}
+.highlight .ge{font-style:italic}
+.highlight .gr{color:#aa0000}
+.highlight .gh{color:#999999}
+.highlight .gi{color:#000000;background-color:#ddffdd}
+.highlight .gi .x{color:#000000;background-color:#aaffaa}
+.highlight .go{color:#888888}
+.highlight .gp{color:#555555}
+.highlight .gs{font-weight:bold}
+.highlight .gu{color:#800080;font-weight:bold}
+.highlight .gt{color:#aa0000}
+.highlight .kc{font-weight:bold}
+.highlight .kd{font-weight:bold}
+.highlight .kn{font-weight:bold}
+.highlight .kp{font-weight:bold}
+.highlight .kr{font-weight:bold}
+.highlight .kt{color:#445588;font-weight:bold}
+.highlight .m{color:#009999}
+.highlight .s{color:#d14}
+.highlight .na{color:#008080}
+.highlight .nb{color:#0086B3}
+.highlight .nc{color:#445588;font-weight:bold}
+.highlight .no{color:#008080}
+.highlight .ni{color:#800080}
+.highlight .ne{color:#990000;font-weight:bold}
+.highlight .nf{color:#990000;font-weight:bold}
+.highlight .nn{color:#555555}
+.highlight .nt{color:#000080}
+.highlight .nv{color:#008080}
+.highlight .ow{font-weight:bold}
+.highlight .w{color:#bbbbbb}
+.highlight .mf{color:#009999}
+.highlight .mh{color:#009999}
+.highlight .mi{color:#009999}
+.highlight .mo{color:#009999}
+.highlight .sb{color:#d14}
+.highlight .sc{color:#d14}
+.highlight .sd{color:#d14}
+.highlight .s2{color:#d14}
+.highlight .se{color:#d14}
+.highlight .sh{color:#d14}
+.highlight .si{color:#d14}
+.highlight .sx{color:#d14}
+.highlight .sr{color:#009926}
+.highlight .s1{color:#d14}
+.highlight .ss{color:#990073}
+.highlight .bp{color:#999999}
+.highlight .vc{color:#008080}
+.highlight .vg{color:#008080}
+.highlight .vi{color:#008080}
+.highlight .il{color:#009999}
+.highlight .gc{color:#999;background-color:#EAF2F5}
+.type-csharp .highlight .k{color:#0000FF}
+.type-csharp .highlight .kt{color:#0000FF}
+.type-csharp .highlight .nf{color:#000000;font-weight:normal}
+.type-csharp .highlight .nc{color:#2B91AF}
+.type-csharp .highlight .nn{color:#000000}
+.type-csharp .highlight .s{color:#A31515}
+.type-csharp .highlight .sc{color:#A31515}
+
+
+</style><body><p>1 在IE6中</p>
+<pre><code> &lt;a&gt;&lt;/a&gt;
+</code></pre>
+<p>上面a标签的hover，鼠标不出现手形</p>
+<p>解决方法：</p>
+<blockquote>
+<blockquote>
+<p>要想使其有效，应该加上href属性并写入一个值</p>
+</blockquote>
+</blockquote>
+<p>2 在一个块级元素内部有两个行级元素，如果其中一个浮动，则两个行级元素无法保持在同一行，</p>
+<p>解决方法：</p>
+<blockquote>
+<blockquote>
+<p>为了能够，则另一个行级元素也应该浮动</p>
+</blockquote>
+</blockquote>
+<p>3 块级元素浮动之后在加边距，在IE6下面就会有双倍的边距</p>
+<p>解决方法：</p>
+<blockquote>
+<blockquote>
+<p>这个时候针对这个块级元素添加一个display:inline就可以</p>
+</blockquote>
+</blockquote>
+<p>4 两个块级元素相邻，并且浮动的时候，如果宽度，高度为设置的话，可能会挤在一起，因根据需要添加</p>
+<p>5 在IE6下，当背景图片高度很小（小于18px）的时候，背景图片下面会有空白，因为IE6里面默认了div的最小高度为18，当低于这个值的时候，会自动的把高度增加到18px。</p>
+<p>解决方法：</p>
+<blockquote>
+<blockquote>
+<p>可以通过overflow:hidden;解决这个问题</p>
+</blockquote>
+</blockquote>
+<p>6 当一个块级元素内部有浮动的时候,为了能够包含该浮动,需要给该块级元素添加一个overflow:hidden;但是这个在IE6中似乎还必须将该块级元素的高度，宽度等设定好</p>
+<p>修正：</p>
+<blockquote>
+<blockquote>
+<p>这个是未触发haslayout，可以通过z-index:1;解决</p>
+</blockquote>
+</blockquote>
+<p>7 IE6中图片下面有空白，</p>
+<p>解决方法：</p>
+<blockquote>
+<blockquote>
+<p>一般可以通过给图片添加display:block;解决此问题</p>
+</blockquote>
+</blockquote>
+<p>8 关于有position:absolute;样式的标签，在IE6里面似乎不可以定位到position:fixed;的标签上，因为IE6不支持position:fixed;</p>
+<p>9 在Firefox和chrome里面,当一个元素有背景的时候,如果它的子元素有margin,则margin产生的效果作用在父元素而非子元素上,</p>
+<p>解决方法：</p>
+<blockquote>
+<blockquote>
+<p>可以通过在父元素上添加overflow:hidden;解决</p>
+</blockquote>
+</blockquote>
+<p>10 操蛋的，在IE中，<code>&lt;option&gt;</code>标签不支持display:hidden;这个没有什么解决方案，只能remove和add去控制他们的隐藏和显示</p>
+<p>11.在IE6,7中，float:right;换行的bug （类似于bug2）</p>
+<pre><code> &lt;div&gt;
+      &lt;span&gt;normal&lt;/span&gt;
+      &lt;span style="float:right"&gt;float right&lt;/span&gt;
+ &lt;/div&gt;
+</code></pre>
+<p>在上面的例子中，第二个span最后会在第一个span的下一行显示</p>
+<p>解决方案：</p>
+<blockquote>
+<blockquote>
+<p>给div加上zoom:1;overflow:hidden;触发layout和BFC(Block Formatting Context)，防止内部浮动影响外围
+给第一个span加上float:left;或者把第二个span放到第一个前面</p>
+</blockquote>
+</blockquote>
+<p>12.li里面放置了很多的块级元素，在IE下，li的上部或者下部会莫名其妙的多出一到两个像素，</p>
+<p>解决方法：</p>
+<blockquote>
+<blockquote>
+<p>可以给li添加一个vertical-align:middle;</p>
+</blockquote>
+</blockquote>
+<p>13.这个是ie67的一个bug, 当某块级元素设置了 margin-top ，并且之前存在着可被渲染的绝对定位元素时，其 margin-top 在 IE6 IE7会失效。</p>
+<p>解决方式:</p>
+<blockquote>
+<blockquote>
+<p>把该绝对定位的元素放在需要margin-top的元素的后面，或者该用padding-top</p>
+</blockquote>
+</blockquote>
+<p>14.如果DIV中没有文字, 鼠标移过div不会有手型出现(FF中没有问题),</p>
+<p>解决方法：</p>
+<blockquote>
+<blockquote>
+<p>经测试发现如果有background-color可以解决这个问题, 所以如果再加一个完全透明就可以解决问题 background-color:white;opacity:0;filter:alpha(opacity=0)</p>
+</blockquote>
+</blockquote>
+<p>15.input type="text"的边框如果想去除的话应该是用border: medium none;因为在IE下，直接使用border:none;是无法隐藏边框的。其他的元素的边框似乎都可以通过border:none;去除</p>
+<p>16.当字体的大小大于22PX左右的时候，可以考虑不用加粗，因为这个时候已经字体的粗细已经足够了</p>
+<p>17.有时候对一个DIV进行margin-top的时候的值为负值时，在Firefox下会出现奇怪的偏差，大概在10px左右，</p>
+<p>解决方法：</p>
+<blockquote>
+<blockquote>
+<p>为了解决这个问题，可以给该DIV加一个overflow: hidden;就能解决</p>
+</blockquote>
+</blockquote>
+<p>18.在非IE的浏览器中，当input type="text"的输入框为选中状态时，在框四周会有一个轮廓线，如果想去除的话，可以考虑使用outline属性，当然也可以通过这个属性去修改轮廓线的样式</p>
+<p>19.IE6的奇数BUG，在IE6里面有很多地方会出现一些奇怪的奇数bug，有的要求是奇数，有的要求不能为奇数，否则会产生1px的差距。但凡遇到此类的问题时，可以考虑是不是此类问题。像我遇到的一个问题就是父元素高度auto，有个padding-bottom: 3px;子元素相对其绝对定位，bottom: -1px;可是在IE6里面，总是显示为bottom:0px;(猜测的，因为设置-1px是为了遮住父元素的border，而IE6里面没有遮住），后来把padding-bottom: 3px改为4px，然后就正常显示了，不用hack</p>
+<p>20.在IE6下，父元素position: static;子元素position: relative;可能会发生一些偏移或者串位的现象，</p>
+<p>解决方法：</p>
+<blockquote>
+<blockquote>
+<p>可以尝试着给父元素设置为： position: relative;解决此问题</p>
+</blockquote>
+</blockquote>
+<p>21.IE6中元素height设定，若line-height的值大于height值，会使得元素的高度增加</p>
+<p>22.IE6下在html中使用注释的时候要注意，尽量不要再浮动元素附近使用，可能会影响到排版</p>
+<p>23.IE6下对透明图片使用滤镜之后，该透明图片无法使用background-position</p>
+<p>24.IE浏览器里面如果在input type="text"中输入了内容，然后按F5刷新的时候，浏览器似乎会保存你上一次输入的内容，这一个细节要注意</p>
+<p>25.在IE6下面，比较两个元素的层级，比较的不单单是它们本身的，还有它们父元素所在的层级</p>
+<p>26.display:block;的li,竖向排列多个，在IE和非IE浏览器下面，高度会有几个像素的差距。</p>
+<p>解决方法：</p>
+<blockquote>
+<blockquote>
+<p>给li加上vertical-align: middle;一般能够解决这些高度的偏差————求解释为什么</p>
+</blockquote>
+</blockquote>
+<p>27.绝对定位的a标签在IE下面   元素无内容 || 元素无背景（没有背景图和背景色）    会无法点击</p>
+<p>解决办法：</p>
+<blockquote>
+<blockquote>
+<ul>
+<li>
+<p>给元素加透明的背景图，做个1*1px的透明图片 </p>
+</li>
+<li>
+<p>background-color:white;opacity:0;filter:alpha(opacity=0) 参考条例14</p>
+</li>
+<li>
+<p>background:url(about:blank) || background: url(#) </p>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<p>第三种方法平时用用是可以的，但是在某种情况下会有bug, 比如JS拖动层时候，拖动的事件在一个透明层上面，你有设置了其他鼠标光标，这时候拖动就会出现光标闪烁的现象！</p>
+<p>28 IE6对ul中和li同级的块级元素的解析错误</p>
+<p>在IE6里面以下结构</p>
+<pre><code> &lt;ul&gt;
+      &lt;li&gt;&lt;/li&gt;
+      &lt;div&gt;&lt;/div&gt;
+      &lt;li&gt;&lt;/li&gt;
+      &lt;div&gt;&lt;/div&gt;
+ &lt;/ul&gt;
+</code></pre>
+<p>会被解析成如下情况</p>
+<pre><code> &lt;ul&gt;
+      &lt;li&gt;&lt;div&gt;&lt;/div&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;div&gt;&lt;/div&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+</code></pre>
+<p>29 webkit password 的一个奇怪问题，这个在一般的浏览器如Chrome中不存在，</p>
+<p>但是在webview和Android原生的浏览器中存在如下的结构：</p>
+<pre><code> &lt;div class="fm-input J-text-input"&gt;
+      &lt;label for="J-fmPwd"&gt;密啊啊啊啊啊啊啊啊码：&lt;/label&gt;
+      &lt;input type="password" placeholder="输入密码" id="J-fmPwd" name="password"&gt;
+ &lt;/div&gt;
+
+ div{position: relative;}
+ label{position: absolute;background: #FCC;}
+</code></pre>
+<p>label通过绝对定位放置在input上面。
+当password获取焦点的时候，label的背景色消失，同时label中的文本变成password的placeholder（仅是效果上如此，通过js输出password的placeholder的值还是没变的）</p>
+<p>解决方式: </p>
+<blockquote>
+<blockquote>
+<p>把input type="password" 变成 input type="text" 同时给input添加样式-webkit-text-security: disc;这样就能使用text模拟出password的效果，同时不会产生该bug</p>
+</blockquote>
+</blockquote>
+<p>30 在webview和Android原生浏览器里面，input(text) input(password) 在获取焦点的时候，似乎会把对应label的值以类似placeholder的方式填充到input框里面。暂时不知道如何使用css解决此问题。用js的方式就是把label标签改成span，防止获取焦点时的问题，同时给span绑定点击事件，点击时使得对应input focus</p></body></html>
