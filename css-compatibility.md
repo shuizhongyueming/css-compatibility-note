@@ -19,10 +19,10 @@
 10. 操蛋的，在IE中，<option>标签不支持display:hidden;这个没有什么解决方案，只能remove和add去控制他们的隐藏和显示
 
 11.在IE6,7中，float:right;换行的bug （类似于bug2）
-<div>
-<span>normal</span>
-<span style="float:right">float right</span>
-</div>
+     <div>
+          <span>normal</span>
+          <span style="float:right">float right</span>
+     </div>
 在上面的例子中，第二个span最后会在第一个span的下一行显示
 解决方案：
 给div加上zoom:1;overflow:hidden;触发layout和BFC(Block Formatting Context)，防止内部浮动影响外围
@@ -65,26 +65,29 @@
 
 28. IE6对ul中和li同级的块级元素的解析错误
 在IE6里面以下结构
-<ul>
-     <li></li>
-     <div></div>
-     <li></li>
-     <div></div>
-</ul>
+
+     <ul>
+          <li></li>
+          <div></div>
+          <li></li>
+          <div></div>
+     </ul>
+     
 会被解析成如下情况
-<ul>
-     <li><div></div></li>
-     <li><div></div></li>
-</ul>
+
+     <ul>
+          <li><div></div></li>
+          <li><div></div></li>
+     </ul>
 
 
 29. webkit password 的一个奇怪问题，这个在一般的浏览器如Chrome中不存在，但是在webview和Android原生的浏览器中存在
 如下的结构：
 
-<div class="fm-input J-text-input"><label for="J-fmPwd">密啊啊啊啊啊啊啊啊码：</label><input type="password" placeholder="输入密码" id="J-fmPwd" name="password"></div>
+     <div class="fm-input J-text-input"><label for="J-fmPwd">密啊啊啊啊啊啊啊啊码：</label><input type="password" placeholder="输入密码" id="J-fmPwd" name="password"></div>
 
-div{position: relative;}
-label{position: absolute;background: #FCC;}
+     div{position: relative;}
+     label{position: absolute;background: #FCC;}
 
 label通过绝对定位放置在input上面。
 当password获取焦点的时候，label的背景色消失，同时label中的文本变成password的placeholder（仅是效果上如此，通过js输出password的placeholder的值还是没变的）
